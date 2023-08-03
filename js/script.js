@@ -1,4 +1,4 @@
-const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const toggleSwitch = document.querySelector('.theme-switch>input[type="checkbox"].slider');
 const docElement = document.documentElement;
 const nav = document.getElementById('nav');
 const toggleIcon = document.getElementById('toggle-icon');
