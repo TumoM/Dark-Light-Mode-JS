@@ -34,11 +34,9 @@ function toggleDarkLightMode(mode) {
 // Switch Theme dynamically
 function switchTheme(event) {
     if (event.target.checked){
-        console.log('Toggle On');
         toggleDarkLightMode(DARK_THEME);
     }
     else {
-        console.log('Toggle Off');
         toggleDarkLightMode(LIGHT_THEME);
     }
 }
@@ -48,12 +46,10 @@ toggleSwitch.addEventListener('change', switchTheme)
 
 // Check local storage for theme
 const currentTheme = localStorage.getItem('theme') || LIGHT_THEME
-if (currentTheme === 'dark'){
-    console.log('Setting Dark theme');
+if (currentTheme === DARK_THEME){
     toggleSwitch.checked = true;
     toggleDarkLightMode(DARK_THEME);
 }
 else {
-    console.log('Setting Light theme');
     toggleDarkLightMode(LIGHT_THEME);
 }
